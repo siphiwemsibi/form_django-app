@@ -11,3 +11,4 @@ mysite/__pycache__/urls.cpython-313.pyc
 mysite/__pycache__/wsgi.cpython-313.pyc
 job_application/__pycache__/urls.cpython-313.pyc
 job_application/__pycache__/views.cpython-313.pyc
+job_application/__pycache__/forms.cpython-313.pyc
