@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from .forms import ApplicationForm
+from .models import Form
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -14,7 +17,15 @@ def index(request):
             date = form.cleaned_data['date']
             occupation = form.cleaned_data['occupation']
 
-            print(first_name)
-            
+            #save to the database 
+            Form.objects.create(
+                first_name=first_name,
+                last_name=last_name,
+                email=email,
+                date=date,
+                occupation=occupation
+            )
+
+            messages.success(request, 'Your application has been submitted successfully.')
 
     return render(request, 'index.html')
