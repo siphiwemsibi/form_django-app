@@ -36,7 +36,7 @@ The `job_application` app provides the following features:
 
 1. **Install dependencies**:  
     ```bash
-    pip install -r requirements.txt
+    pip3 install django   
     ```
 2. **Apply migrations**:  
     ```bash
