@@ -7,6 +7,7 @@ from django.core.mail import EmailMessage
 
 # Create your views here.
 
+# Index page
 def index(request):
     if request.method == 'POST':
         form = ApplicationForm(request.POST)
@@ -27,7 +28,7 @@ def index(request):
                 occupation=occupation
             )
 
-            #sendd an email notification
+            #send an email notification
             message_body = f"New job application received from {first_name} {last_name}. \
             \nEmail: {email}\nDate: {date}\nOccupation: {occupation}"
             email_message = EmailMessage(
@@ -42,5 +43,11 @@ def index(request):
     return render(request, 'index.html')
 
 
+# About page
 def about(request):
     return render(request, 'about.html')
+
+
+# Contact page
+def contact(request):
+    return render(request, 'contact.html')
